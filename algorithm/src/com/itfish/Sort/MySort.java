@@ -5,7 +5,9 @@ public class MySort {
 	public static void main(String args[]){
 		int[]a={11,23,23,43,56,21,12,9,0};
 //		MySort.shellSort(a);
-		MySort.heapSort(a);
+//		MySort.heapSort(a);
+//		MySort.straightInsertSort(a);
+		MySort.quickSort(a, 0, a.length-1);
 		for(int i:a){
 			System.out.print(i+",");
 		}
@@ -128,5 +130,69 @@ public class MySort {
 			heapMax(a, 0, i);
 		}
 	}
+	public static void merge(int a[],int low,int mid,int high){
+		int i=low;
+		int j=mid+1;
+		int k=0;
+		int temp[]=new int[high-low+1];
+		System.out.println("length="+(high-low+1));
+		while(i<=mid&&j<=high){
+			if(a[i]<a[j]){
+				temp[k++]=a[i++];
+				System.out.println("k="+k+"i="+i);
+			}else{
+				temp[k++]=a[j++];
+				System.out.println("k="+k+"j="+j);
+			}
+		}
+		while(i<=mid){
+			temp[k++]=a[i++];
+		}
+		while(j<=high){
+			temp[k++]=a[j++];
+		}
+		for(int t=0;t<temp.length;t++)
+		{
+			a[t+low]=temp[t];
+		}
+	}
+	public static void mergeSort(int[] a,int low,int high){
+		int mid=(high+low)/2;
+		System.out.println("low="+low+"mid="+mid+"high="+high);
+		if(low<high){
+			mergeSort(a,low,mid);
+			mergeSort(a,mid+1,high);
+			merge(a,low,mid,high);
+		}
+		
+	}
+	public static int getPartition(int a[],int low,int high){
+		int temp=a[low];
+		System.out.println("temp++"+temp);
+		while(low<high){
+			System.out.println("0000low="+low+"high="+high+"temp="+temp);
+			while(low<high&&a[high]>temp){
+				high--;
+				System.out.println("high");
+			}
+			a[low]=a[high];
+			while(low<high&&a[low]<=temp)//注意两种情况其中一个要加=号，不然会无限循环
+				low++;
+			a[high]=a[low];
+		}
+		a[low]=temp;
+		
+		return low;
+	}
+	public static void quickSort(int a[],int low,int high){
+		if(low<high){
+			System.out.println("low="+low+"high="+high);
+			int mid=getPartition(a, low, high);
+			quickSort(a, low, mid-1);
+			quickSort(a, mid+1, high);
+		}
+		
+	}
+
 
 }
