@@ -1,3 +1,6 @@
 # algorithm
-复习算法
-新建了一个文件夹，用以保存学习剑指offer的代码，代码以通过牛客网的在线笔试为标准
+算法
+--algorithm 存放各种算法的联系代码
+--swordoffer 剑指offer练习代码，以通过牛客网在线测试为标准
+--javascript 牛客网js能力测评练习题
+
