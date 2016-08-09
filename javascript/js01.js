@@ -12,6 +12,4 @@ function indexOf(arr, item) {
 
     return -1;
 
-​
-
 }

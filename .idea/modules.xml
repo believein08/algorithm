@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ArtOfPrograming/ArtOfPrograming.iml" filepath="$PROJECT_DIR$/ArtOfPrograming/ArtOfPrograming.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/algorithm.iml" filepath="$PROJECT_DIR$/.idea/algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/swordoffer/swordoffer.iml" filepath="$PROJECT_DIR$/swordoffer/swordoffer.iml" />
     </modules>
   </component>
