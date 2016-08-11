@@ -72,7 +72,7 @@ public class MySort {
 			}
 		}while(increment>1);
 	}
-//	public static void heapSort(int a[]){
+//	pub static void heapSort(int a[]){
 //		for(int i=a.length/2;i>-1;i--){
 //			HeapAdjust(a, i, a.length);
 //		}
@@ -81,7 +81,7 @@ public class MySort {
 //			HeapAdjust(a, 0, i);
 //		}
 //	}
-//	public static void HeapAdjust(int a[],int s,int l){
+//	pub static void HeapAdjust(int a[],int s,int l){
 //		int temp=a[s];
 //		for(int i=2*s+1;i<l;i=i*2+1){
 //			if(a[i]<a[i+1]&&i<l-1){
@@ -96,7 +96,7 @@ public class MySort {
 //		a[s]=temp;
 //		
 //	}
-//	public static void swap(int a[],int i,int j){
+//	pub static void swap(int a[],int i,int j){
 //		int temp=a[i];
 //		a[i]=a[j];
 //		a[j]=temp;
@@ -176,7 +176,7 @@ public class MySort {
 				System.out.println("high");
 			}
 			a[low]=a[high];
-			while(low<high&&a[low]<=temp)//×¢ÒâÁ½ÖÖÇé¿öÆäÖĞÒ»¸öÒª¼Ó=ºÅ£¬²»È»»áÎŞÏŞÑ­»·
+			while(low<high&&a[low]<=temp)//×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Òªï¿½ï¿½=ï¿½Å£ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
 				low++;
 			a[high]=a[low];
 		}
