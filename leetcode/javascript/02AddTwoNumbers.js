@@ -17,7 +17,7 @@ var addTwoNumbers=function (l1,l2) {
         var y=(q!=null)?q.val:0;
         var sum=x+y+adding;
         cur.next=new ListNode(sum%10);
-        adding=sum/10
+        adding=Math.floor(sum/10);
         if(p!=null)
             p=p.next;
         if(q!=null)
@@ -48,7 +48,7 @@ l5.next=l6;
 
 var p=addTwoNumbers(l1,l4);
 while(p!=null){
-    console.info(p.val)
+    console.info(p.val);
     p=p.next;
 }
-console.info(addTwoNumbers(l1,l4))
+console.info(addTwoNumbers(l1,l4));
