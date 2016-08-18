@@ -24,7 +24,7 @@ public class Solution {
     }
     public static void printList(ListNode l){
         while(l!=null){
-            System.out.print(l.value+"->");
+            System.out.print(l.val +"->");
             l=l.next;
         }
         System.out.println();
@@ -49,7 +49,7 @@ public class Solution {
         }
         else{
             ListNode q=target.next;
-            target.value=q.value;
+            target.val =q.val;
             target.next=q.next;
             q=null;
 
